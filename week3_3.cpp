@@ -1,3 +1,5 @@
+//Вычислить сумму элементов массива, больших 20
+
 #include <iostream>
 #include <stdlib.h>
 #include <fstream>
