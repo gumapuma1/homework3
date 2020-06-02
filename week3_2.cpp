@@ -1,3 +1,5 @@
+//Вычислить сумму элементов массива, больших 5
+
 #include <iostream>
 #include <stdlib.h>
 
