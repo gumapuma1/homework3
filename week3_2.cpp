@@ -2,14 +2,22 @@
 
 #include <iostream>
 #include <stdlib.h>
+#include <fstream>
 
 using namespace std;
 
 const int n = 10;
 
+void fileWrite(int x);
+
 int main() {
     int arr[n], sum = 0;
-    srand(6527);
+    srand(time(nullptr));
+
+    //clear the text file
+    ofstream fout;
+    fout.open("data.txt");
+    fout.close();
 
     for(int i = 0; i < n; i++) {
         arr[i] = rand() % 20;
@@ -22,5 +30,19 @@ int main() {
     }
     cout << endl << "Sum (>5) = " << sum << endl;
 
+    fileWrite(sum);
+
     return 0;
+}
+
+void fileWrite(int x) {
+    ofstream fout;
+    fout.open("data.txt", ofstream::out | ofstream::app);
+
+    if(!fout.is_open()) {
+        cout << "Error. File isn't open.";
+    }
+    else {
+        fout << x;
+    }
 }
