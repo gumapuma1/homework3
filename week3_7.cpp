@@ -33,6 +33,7 @@ int main() {
     cout << endl;
 
     cout << "Elements larger than num: " << count << endl;
+    fileWrite(count);
 
     return 0;
 }
